@@ -14,8 +14,7 @@ function filterJobs(e) {
 
 
     data = datas.filter((x, index) => {
-        return x.languages.join(" ").toLowerCase().includes(filterValue) === true || x.tools.join(" ").toLowerCase().includes(filterValue) === true
-
+        return x.languages.join(" ").toLowerCase().includes(filterValue) === true || x.tools.join(" ").toLowerCase().includes(filterValue) === true || x.company.toLowerCase().includes(filterValue) === true || x.position.toLowerCase().includes(filterValue) === true
     })
     container.innerHTML = "";
     getData(data)
