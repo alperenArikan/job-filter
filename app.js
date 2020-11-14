@@ -4,10 +4,6 @@ import datas from "./data.js"
 let data = datas;
 
 filter.addEventListener("keyup", filterJobs);
-
-
-
-
 document.addEventListener("DOMContentLoaded", getData(data))
 
 function filterJobs(e) {
@@ -15,13 +11,15 @@ function filterJobs(e) {
     console.log(filterValue)
     let languages = document.querySelectorAll(".languages");
     let tools = document.querySelectorAll(".tools");
+
+
     data = datas.filter((x, index) => {
         return x.languages.join(" ").toLowerCase().includes(filterValue) === true || x.tools.join(" ").toLowerCase().includes(filterValue) === true
+
     })
     container.innerHTML = "";
     getData(data)
 }
-
 
 function getData(data) {
     data.map(x => {
@@ -56,9 +54,11 @@ function getData(data) {
                 <p class="level">${x.level}</p>
                 <div class="lang-tools">
                     ${x.languages ? x.languages.map(y => {
+
             return `<p class="languages">${y}</p>`
         }).join(" ") : ""}
         ${x.tools ? x.tools.map(z => {
+
             return `<p class="tools">${z}</p>`
         }).join(" ") : ""}
                 </div>
@@ -67,6 +67,7 @@ function getData(data) {
           </div >
         </div >
       </div >
+            `
     })
 }
 
