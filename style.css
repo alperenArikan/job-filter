@@ -1,0 +1,163 @@
+html{
+    font-size: 15px;
+}
+body{
+    background-color: hsl(180, 52%, 96%);
+
+
+}
+.header{
+    height: 10vh;
+    background-color: hsl(180, 29%, 50%);
+        background-image: url(/images/bg-header-desktop.svg);
+    background-repeat: no-repeat;
+    margin-bottom: 4rem;
+    position: relative;
+}
+.form-container{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+
+    height: rem;
+    transform: translate(-50% , -50%);
+}
+#filter{
+    height: 3.5rem;
+}
+.job-card{
+    padding: 1.5rem;
+    background-color: #fff;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+
+}
+
+.info-top{
+    display: flex;
+    padding: 0;
+    margin: 0;
+
+}
+.image-container{
+    padding: 0;
+}
+.image-container img{
+    width: 100%;
+}
+.info-bottom{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    color: hsl(180, 8%, 52%);
+    padding: 0;
+
+    
+}
+.info-bottom p{
+    margin: 0;
+}
+
+
+
+.lang-tools{
+    display: flex;
+}
+
+.lang-tools > p{
+    display: inline-block;
+}
+
+.tag-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.role,.level,.languages,.tools{
+    background-color: hsl(180, 52%, 96%);
+    color: hsl(180, 29%, 50%);
+    padding: .5rem;
+    border-radius: .2rem;
+    margin-left: .5rem;
+}
+.role:hover,.level:hover,.languages:hover,.tools:hover{
+    background-color: hsl(180, 29%, 50%);
+    color: #fff;
+}
+.circle{
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 1rem;
+}
+
+.company{
+    color: hsl(180, 29%, 50%);
+    font-weight: 500;
+    margin-right: .5rem;
+    padding: 0.3rem;
+}
+.new{
+    background-color: hsl(180, 29%, 50%);
+    border-radius: .8rem;
+    color: #fff;
+    margin-right: 1rem;
+    padding: 0.3rem .5rem .3rem .5rem;
+    font-weight: 500;
+    
+}
+.featured{
+    background-color: #000;
+    color: #fff;
+    border-radius: 1rem;
+    padding: 0.3rem .5rem .3rem .5rem;
+    font-weight: 500;
+}
+
+.position{
+    color: black;
+    margin: 0;
+    font-weight: 700;
+    margin-top: -.5rem;
+    margin-bottom: .5rem;
+
+}
+
+
+@media (max-width: 768px){
+.image-container{
+    position: absolute;
+    top: -2.5rem;
+    left: 15%;
+    width: 5rem;
+
+}
+.info-top{
+margin: 1.5rem 0 1rem 0;
+}
+.info-bottom{
+    margin-bottom: 1rem;
+
+}
+.info-bottom::after{
+    position: absolute;
+    top: 100%;
+    content: "";
+    width: 85%;
+    height: 1px;
+    border-bottom: 1px solid #ccc ;
+
+}
+.tag-container{
+    margin-top: .5rem;
+}
+.header{
+    margin-bottom: 6rem;
+}
+.job-card{
+    margin-bottom: 3rem;
+}
+}
