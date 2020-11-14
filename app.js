@@ -15,30 +15,8 @@ function filterJobs(e) {
     console.log(filterValue)
     let languages = document.querySelectorAll(".languages");
     let tools = document.querySelectorAll(".tools");
-
-
-    // languages.forEach(language => {
-    //     const text = language.textContent.toLowerCase();
-    //     if (text.indexOf(filterValue) === -1) {
-    //         language.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.setAttribute("style", "display : none !important")
-    //     }
-    //     else {
-    //         language.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.setAttribute("style", "display : flex !important");
-    //     }
-    // })
-    // tools.forEach(tool => {
-    //     const text = tool.textContent.toLowerCase();
-    //     if (text.indexOf(filterValue) === -1) {
-    //         tool.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.setAttribute("style", "display : none !important")
-    //     }
-    //     else {
-    //         tool.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.setAttribute("style", "display : flex !important");
-    //     }
-    // })
-
     data = datas.filter((x, index) => {
         return x.languages.join(" ").toLowerCase().includes(filterValue) === true || x.tools.join(" ").toLowerCase().includes(filterValue) === true
-
     })
     container.innerHTML = "";
     getData(data)
@@ -78,11 +56,9 @@ function getData(data) {
                 <p class="level">${x.level}</p>
                 <div class="lang-tools">
                     ${x.languages ? x.languages.map(y => {
-
             return `<p class="languages">${y}</p>`
         }).join(" ") : ""}
         ${x.tools ? x.tools.map(z => {
-
             return `<p class="tools">${z}</p>`
         }).join(" ") : ""}
                 </div>
@@ -91,7 +67,6 @@ function getData(data) {
           </div >
         </div >
       </div >
-            `
     })
 }
 
