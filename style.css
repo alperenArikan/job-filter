@@ -1,9 +1,9 @@
 html{
     font-size: 15px;
+    font-family: 'Spartan', sans-serif;
 }
 body{
     background-color: hsl(180, 52%, 96%);
-
 
 }
 .header{
@@ -79,11 +79,12 @@ body{
     color: hsl(180, 29%, 50%);
     padding: .5rem;
     border-radius: .2rem;
-    margin-left: .5rem;
+    margin-left: .8rem;
 }
 .role:hover,.level:hover,.languages:hover,.tools:hover{
     background-color: hsl(180, 29%, 50%);
     color: #fff;
+    cursor: pointer;
 }
 .circle{
     display: inline-block;
@@ -91,14 +92,14 @@ body{
     height: 5px;
     border-radius: 50%;
     background-color: #ccc;
-    margin: 0 1rem;
+    margin: 0 .5rem;
 }
 
 .company{
     color: hsl(180, 29%, 50%);
     font-weight: 500;
     margin-right: .5rem;
-    padding: 0.3rem;
+    padding: 0.3rem 0.3rem 0.3rem 0;
 }
 .new{
     background-color: hsl(180, 29%, 50%);
@@ -125,13 +126,23 @@ body{
     margin-bottom: .5rem;
 
 }
+.position:hover{
+    color: hsl(180, 29%, 50%);
+    cursor: pointer;
+}
 
-
+.error{
+    color:hsl(180, 29%, 50%) ;
+    align-self: center;
+}
 @media (max-width: 768px){
+    html{
+        font-size: 14px;
+    }
 .image-container{
     position: absolute;
     top: -2.5rem;
-    left: 15%;
+    left: 3rem;
     width: 5rem;
 
 }
@@ -152,12 +163,19 @@ margin: 1.5rem 0 1rem 0;
 
 }
 .tag-container{
-    margin-top: .5rem;
+    margin-top: 1rem;
 }
 .header{
     margin-bottom: 6rem;
 }
 .job-card{
     margin-bottom: 3rem;
+}
+.tag-container{
+    justify-content: flex-start;
+    padding-left: 0;
+}
+.role,.level,.languages,.tools{
+    margin-right: .8rem;
 }
 }

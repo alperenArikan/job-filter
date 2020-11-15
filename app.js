@@ -8,22 +8,22 @@ document.addEventListener("DOMContentLoaded", getData(data))
 
 function filterJobs(e) {
     let filterValue = e.target.value.toLowerCase();
-    console.log(filterValue)
     let languages = document.querySelectorAll(".languages");
     let tools = document.querySelectorAll(".tools");
-
-
     data = datas.filter((x, index) => {
         return x.languages.join(" ").toLowerCase().includes(filterValue) === true || x.tools.join(" ").toLowerCase().includes(filterValue) === true || x.company.toLowerCase().includes(filterValue) === true || x.position.toLowerCase().includes(filterValue) === true || x.role.toLowerCase().includes(filterValue) === true || x.level.toLowerCase().includes(filterValue) === true
     })
     container.innerHTML = "";
     getData(data)
 }
-
 function getData(data) {
+    console.log(data)
+    if (data.length === 0) {
+        container.innerHTML = `
+        <h1 class="error"> No Result. Please Check Your Search Parameter</h1>
+        `}
     data.map(x => {
         let styleBorder;
-        console.log(x)
         x.featured ? styleBorder = `"border-left: 5px solid hsl(180, 29%, 50%)"` : "";
         container.innerHTML += `
         <div id=${x.id} class="row">
@@ -66,7 +66,6 @@ function getData(data) {
           </div >
         </div >
       </div >
-            `
-    })
+            `})
 }
 
